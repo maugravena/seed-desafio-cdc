@@ -1,4 +1,5 @@
 class Author < ApplicationRecord
   validates :email, :name, :description, presence: true
-  validates :email, length: { maximum:  400 }
+  validates :description, length: { maximum:  400 }
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP  }
 end
