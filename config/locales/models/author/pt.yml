@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      author:
+        one: Autor
+        other: Autores
+    attributes:
+      author:
+        name: Nome
+        description: Descrição
