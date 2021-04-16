@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   def create
-    @author = Author.create!(author_params)
-    render json: @author, status: :created
+    author = Author.create!(author_params)
+    render json: author, status: :created
   end
 
   private
