@@ -1,12 +1,12 @@
 class BooksController < ApplicationController
   def create
-    book = Book.create(book_params)
+    book = Book.create!(book_params)
     render json: book, status: :created
   end
 
   private
 
   def book_params
-    params.require(:book).permit(:title, :resume, :summary, :price, :page_number, :isbn, :publication_date, :category, :author)
+    params.require(:book).permit(:title, :resume, :summary, :price, :page_number, :isbn, :publication_date, :category_id, :author_id)
   end
 end
